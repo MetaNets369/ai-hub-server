@@ -1,8 +1,10 @@
 version: '3.8'
 services:
-  mcp:
-    image: jinaai/mcp:latest
-    container_name: jina-mcp
+  mcp-jina-ai:
+    image: joebuildsstuff/mcp-jina-ai:latest
+    container_name: mcp-jina-ai
     ports:
-      - "127.0.0.1:8081:8080"
+      - "8081:8080"
+    environment:
+      - JINA_API_KEY=${JINA_API_KEY}
     restart: unless-stopped
