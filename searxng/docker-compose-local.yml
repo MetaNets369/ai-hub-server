@@ -9,7 +9,7 @@ services:
     image: searxng/searxng:latest
     container_name: searxng
     ports:
-      - "8087:8087"
+      - "8087:8080"
     volumes:
       - searxng-data:/etc/searxng
       - searxng-cache:/var/cache/searxng
