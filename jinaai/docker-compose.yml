@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   mcp-jina-ai:
-    image: joebuildsstuff/mcp-jina-ai:latest
+    build: https://github.com/jina-ai/MCP.git
     container_name: mcp-jina-ai
     ports:
       - "8081:8080"
