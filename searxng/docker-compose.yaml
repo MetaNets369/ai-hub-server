@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  searxng:
+    image: searxng/searxng:latest
+    container_name: searxng
+    ports:
+      - "8082:8080"
+    environment:
+      - SEARXNG_BASE_URL=http://34.51.171.228:8082/
+    restart: unless-stopped
