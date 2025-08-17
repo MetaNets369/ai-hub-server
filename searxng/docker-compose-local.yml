@@ -14,5 +14,5 @@ services:
       - searxng-data:/etc/searxng
       - searxng-cache:/var/cache/searxng
     environment:
-      - SEARXNG_BASE_URL=http://localhost:8080/
+      - SEARXNG_BASE_URL=http://localhost:8087/
     restart: unless-stopped
