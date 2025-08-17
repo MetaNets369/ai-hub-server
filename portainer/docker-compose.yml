@@ -1,8 +1,15 @@
 version: '3.8'
 services:
-  webserver:
-    image: nginx:latest
-    container_name: my-test-webserver
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
     ports:
-      - "80:80"
+      - "9443:9443"
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
     restart: unless-stopped
+
+volumes:
+  portainer_data:
